@@ -1,0 +1,33 @@
+li{
+    padding-top: 1%;
+}
+
+#delete{
+    float: right;
+    margin: 2%;
+    border: 2px solid purple;
+    padding: 0  1% 1% 1%
+    
+}
+
+body{
+    background-color: lightblue;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, form{
+    text-align: center;
+}
+
+#idName{
+    color: purple;
+}
+
+p{
+    color: purple;
+    text-align: center;
+}
+
+img{
+    width: 100%
+}
