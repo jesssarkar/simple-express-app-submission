@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90210</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="/images/90210_about_web_1400x440.jpeg">
+    </header>
+
+    <h1>Beverly Hills 90210 Characters</h1>
+
+    <form action="/api" method="POST">
+        <input type="text" placeholder="name" name="name">
+        <input type="text" placeholder="full name" name="fullName">
+        <input type="text" placeholder="played by" name="actor">
+        <input type="text" placeholder="parents" name="parents">
+        <input type="text" placeholder="siblings" name="siblings">
+        <input type="text" placeholder="relationships" name="relationships">
+
+        <button type="submit">SUBMIT</button>
+        <button type="button" id="updateButton">UPDATE EXSISTING</button>
+    </form>
+
+    <p>**If updating details about a character, you must enter their first name in all caps in the name box. Please follow that naming convention as well when entering a new character.**</p>
+
+    <section id="delete">
+        <h2>Delete a Character</h2>
+        <input type="text" placeholder="name to delete" name="deleteInput" id="deleteInput">
+        <button id="deleteButton">DELETE</button>
+    </section>
+
+    <h2>Current Characters</h2>
+
+    <ul class="characters">
+        <% for(let i=0; i < info.length; i++) {%>
+            <li class="character">
+                <span id="idName"><%= info[i].name %></span><br>
+                <span><%= info[i].fullName %></span><br>
+                <span><%= info[i].actor %></span><br>
+                <span><%= info[i].parents %></span><br>
+                <span><%= info[i].siblings %></span><br>
+                <span><%= info[i].relationships %></span><br>
+            </li>
+        <% } %>
+        </ul>
+    
+   
+
+
+    <script src="main.js"></script>
+</body>
+</html>
